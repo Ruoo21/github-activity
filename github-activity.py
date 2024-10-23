@@ -115,3 +115,9 @@ if response.status_code == 200:
                 print("Edited sponsership listing")
         elif event_type == "WatchEvent":
             print(f"starred a repository")
+        else:
+            print("They don't have any activity!")
+else:
+    print(
+        "Either that isn't a valid username or Github is acting up. Please try again!"
+    )
