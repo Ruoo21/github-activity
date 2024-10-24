@@ -91,7 +91,7 @@ if response.status_code == 200:
             if payload["action"] == "synchronize":
                 print("Synchronized a pull request")
         elif event_type == "PullRequestReviewEvent":
-            print(f"Created a pull request review at {event["pull_request_url"]}")
+            print(f"Created a pull request review at {payload["pull_request"]["url"]}")
         elif event_type == "PullRequestReviewCommentEvent":
             print("Commented on a pull request review")
         elif event_type == "PullRequestReviewThreadEvent":
